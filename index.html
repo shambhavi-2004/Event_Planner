@@ -1,42 +1,260 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Lab Booking Request</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <form id="bookingForm" method="POST" action="process_booking.php">
-        <h2>Request to Schedule an Event</h2>
-        <label for="event_name">Event Name:</label>
-        <input type="text" id="event_name" name="event_name" required>
-        
-        <label for="lab_no">Venue:</label>
-        <select id="lab_no" name="lab_no" required>
-            <option value="" disabled selected>Select a Classroom or Lab</option>
-            <option value="301">Lab 301</option>
-            <option value="302">Lab 302</option>
-            <option value="303">Lab 303</option>
-            <option value="305">Lab 305</option>
-            <option value="306">Lab 306</option>
-            <option value="307">Lab 307</option>
-            <option value="308">Lab 308</option>
-            <option value="309">Lab 309</option>
-            <option value="310">Lab 310</option>
-        </select>
-        
-        <label for="date1">Date:</label>
-        <input type="date" id="date1" name="date1" required>
-        
-        <label for="from_time">From:</label>
-        <input type="time" id="from_time" name="from_time" required>
-        
-        <label for="to_time">To:</label>
-        <input type="time" id="to_time" name="to_time" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <input type="submit" value="Send Request">
-    </form>
-</body>
+<!--  Primary Blue (#007BFF) Tints #338CFF #66A9FF #99C7FF #CCE4FF Shades #0063CC
+#004A99 #003366 #001933 Amber (#FFC107) Tints #FFCD38 #FFD84C #FFE261 #FFEC75
+Shades #CC9A06 #997404 #664D03 #332701 Gray Colors Light Gray (#F8F9FA) Tints
+#F9F9FA #FAFAFA #FBFBFB #FCFCFC Shades #DFE0E1 #C7C8C9 #AEB0B1 #969798 Medium
+Gray (#6C757D) Tints #889199 #A3ADB5 #BFC9D1 #DBE5ED Shades #5A6066 #484D51
+#36383B #242527 Dark Gray (#343A40) Tints #5D6369 #868A91 #AEB2B8 #D7D9E0 Shades
+#2C3035 #24262A #1B1D1F #131314  -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <!-- Hot Pink (#FF69B4) with Orange (#FFA500) -->
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      body {
+        color: #36383b;
+        font-family: "Inter", "Sans serif";
+      }
+      table {
+        margin: 0 auto;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        box-shadow: 0 0 20px 1px #ff14914b;
+      }
+
+      th {
+        font-size: 2.2rem;
+        padding: 1.6rem 3.2rem;
+      }
+      th:first-child {
+        border-radius: 2rem 0 0 0;
+      }
+      th:last-child {
+        border-radius: 0 2rem 0 0;
+      }
+      td {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+      }
+      table {
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 2rem;
+        padding: 2.4rem 4.8rem;
+        position: relative;
+      }
+      input {
+        border: none;
+      }
+      body {
+        background-image: linear-gradient(135deg, #ff69b49e, #ffa600a4);
+        padding: 50px 0;
+      }
+
+      thead {
+        border-radius: 2rem;
+      }
+      thead tr:first-child {
+        background-color: black;
+        color: white;
+        border-radius: 2rem;
+      }
+
+      tr td:first-child {
+        font-weight: bolder;
+        font-size: 20px;
+        color: #484d51;
+      }
+      button {
+        padding: 1.5rem 3rem;
+        font-size: 2rem;
+        border-radius: 2rem;
+        border: none;
+        background-color: black;
+        color: #fff;
+        font-weight: bolder;
+      }
+      button:hover {
+        background-color: #fff;
+        box-shadow: 0 0 5px 0.5px #ffa600b9;
+        color: #131314;
+        background-image: linear-gradient(
+          to right,
+          hsla(328, 100%, 54%, 0.8),
+          hsla(33, 100%, 50%, 0.8)
+        );
+      }
+      input {
+        font-size: larger;
+      }
+      .btn {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        transform: translate(-50%, 250%);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Lab/Classroom</th>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>301</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>302</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>303</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>304</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>305</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>306</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>307</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>308</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>309</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>310</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>311</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>312</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+        <tr>
+          <td>313</td>
+          <td>
+            <input type="time" />
+          </td>
+          <td>
+            <input type="time" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btn"><button type="submit">Schedule Timetable</button></div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
