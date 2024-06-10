@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Booking Request</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form id="bookingForm" method="POST" action="process_booking.php">
+        <h2>Request to Schedule an Event</h2>
+        <label for="event_name">Event Name:</label>
+        <input type="text" id="event_name" name="event_name" required>
+        
+        <label for="lab_no">Venue:</label>
+        <select id="lab_no" name="lab_no" required>
+            <option value="" disabled selected>Select a Classroom or Lab</option>
+            <option value="301">Lab 301</option>
+            <option value="302">Lab 302</option>
+            <option value="303">Lab 303</option>
+            <option value="305">Lab 305</option>
+            <option value="306">Lab 306</option>
+            <option value="307">Lab 307</option>
+            <option value="308">Lab 308</option>
+            <option value="309">Lab 309</option>
+            <option value="310">Lab 310</option>
+        </select>
+        
+        <label for="date1">Date:</label>
+        <input type="date" id="date1" name="date1" required>
+        
+        <label for="from_time">From:</label>
+        <input type="time" id="from_time" name="from_time" required>
+        
+        <label for="to_time">To:</label>
+        <input type="time" id="to_time" name="to_time" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <input type="submit" value="Send Request">
+    </form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(621px at 25.3% 13.8%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #08163c;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+
+
+}
+
+.request {
+    width: 700px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 60px;
+    border-radius: 8px;
+    background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%);
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.not-available {
+    color: red;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 10px;
+}
+
+select,
+input[type="submit"] {
+    padding: 13px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 160px;
+}
+
+select {
+    width: 200px;
+}
+
+input[type="submit"] {
+    background-color: #7c2637;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b27171;
+}
+
+.buttons {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: background-color 0.5s ease;
+   
+}
+
+.view-button {
+    display: block;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 100px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(to right, #08163c, #3d5e6b);
+    border-top-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: background-color 0.5s ease;
+}
+
+.view-button:hover {
+    background: linear-gradient(to right, #394a79, #9ebecb);
+}

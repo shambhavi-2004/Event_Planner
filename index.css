@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at 10% 20%, rgb(248, 219, 219) 0%, rgb(229, 248, 250) 90%); 
+}
+
+label, input, select, option {
+    font-family: Arial, sans-serif;
+}
+h2 {
+    color:  #551515;
+    text-align: center;
+    margin-bottom: 30px;
+}
+form {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background: linear-gradient(105.4deg, rgb(216, 176, 216) 23.9%, rgb(53, 169, 215) 86.5%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+input[type="submit"]:hover {
+    background: linear-gradient(105.4deg, rgb(215, 199, 215) 23.9%, rgb(133, 188, 210) 86.5%);
+
+}
+input::placeholder {
+    color: #999;
+}
+select {
+    cursor: pointer;
+}
